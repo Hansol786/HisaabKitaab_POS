@@ -11,43 +11,36 @@
     <!-- App favicon -->
     <link rel="shortcut icon" href="{{ asset('dashboard') }}/images/favicon.ico">
     <!-- App css -->
-    <link href="{{ asset('dashboard') }}/css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bs-default-stylesheet" />
-    <link href="{{ asset('dashboard') }}/css/app.min.css" rel="stylesheet" type="text/css" id="app-default-stylesheet" />
-    <link href="{{ asset('dashboard') }}/css/bootstrap-dark.min.css" rel="stylesheet" type="text/css" id="bs-dark-stylesheet" />
-    <link href="{{ asset('dashboard') }}/css/app-dark.min.css" rel="stylesheet" type="text/css" id="app-dark-stylesheet" />
-
-    <link href="{{ asset('dashboard') }}/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('dashboard') }}/libs/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('dashboard') }}/libs/datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('dashboard') }}/libs/datatables.net-select-bs5/css/select.bootstrap5.min.css" rel="stylesheet" type="text/css" />
-
+    <link href="{{ asset('public/dashboard') }}/css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bs-default-stylesheet" />
+    <link href="{{ asset('public/dashboard') }}/css/app.min.css" rel="stylesheet" type="text/css" id="app-default-stylesheet" />
+    <link href="{{ asset('public/dashboard') }}/css/bootstrap-dark.min.css" rel="stylesheet" type="text/css" id="bs-dark-stylesheet" />
+    <link href="{{ asset('public/dashboard') }}/css/app-dark.min.css" rel="stylesheet" type="text/css" id="app-dark-stylesheet" />
+    <link href="{{ asset('public/dashboard') }}/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('public/dashboard') }}/libs/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('public/dashboard') }}/libs/datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('public/dashboard') }}/libs/datatables.net-select-bs5/css/select.bootstrap5.min.css" rel="stylesheet" type="text/css" />
     <!-- Plugins css -->
-    <link href="{{ asset('dashboard') }}/libs/spectrum-colorpicker2/spectrum.min.css" rel="stylesheet" type="text/css">
-    <link href="{{ asset('dashboard') }}/libs/flatpickr/flatpickr.min.css" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('dashboard') }}/libs/clockpicker/bootstrap-clockpicker.min.css" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('dashboard') }}/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('dashboard') }}/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
-<!-- aaa -->
+    <link href="{{ asset('public/dashboard') }}/libs/spectrum-colorpicker2/spectrum.min.css" rel="stylesheet" type="text/css">
+    <link href="{{ asset('public/dashboard') }}/libs/flatpickr/flatpickr.min.css" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('public/dashboard') }}/libs/clockpicker/bootstrap-clockpicker.min.css" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('public/dashboard') }}/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('public/dashboard') }}/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
     <!-- icons -->
-    <link href="{{ asset('dashboard') }}/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('public/dashboard') }}/css/icons.min.css" rel="stylesheet" type="text/css" />
     <!-- custom style -->
-    <link href="{{ asset('dashboard') }}/css/hansol-style.css" rel="stylesheet">
+    <link href="{{ asset('public/dashboard') }}/css/hansol-style.css" rel="stylesheet">
     <!-- style css -->
-    <link href="{{ asset('dashboard') }}/css/style.css" rel="stylesheet">
+    <link href="{{ asset('public/dashboard') }}/css/style.css" rel="stylesheet">
     @stack('css')
 </head>
-
 <!-- body start -->
-
 <body class="loading" data-layout='{"mode": "light", "width": "fluid", "menuPosition": "fixed", "sidebar": { "color": "light", "size": "default", "showuser": false}, "topbar": {"color": "dark"}, "showRightSidebarOnPageLoad": true}'>
     <!-- Begin page -->
     <div id="wrapper">
-
         <!-- Topbar Start -->
         <div class="navbar-custom">
             <div class="container-fluid">
                 <ul class="list-unstyled topnav-menu float-end mb-0">
-
                     <li class="d-none d-lg-block">
                         <form class="app-search">
                             <div class="app-search-box dropdown">
@@ -77,7 +70,6 @@
                             </div>
                         </form>
                     </li>
-
                     <li class="dropdown d-inline-block d-lg-none">
                         <a class="nav-link dropdown-toggle arrow-none waves-effect waves-light"
                             data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false"
@@ -91,52 +83,47 @@
                             </form>
                         </div>
                     </li>
-
                     <li class="dropdown d-none d-lg-inline-block">
                         <a class="nav-link dropdown-toggle arrow-none waves-effect waves-light" data-toggle="fullscreen"
                             href="#">
                             <i class="fe-maximize noti-icon"></i>
                         </a>
                     </li>
-
                     <li class="dropdown d-none d-lg-inline-block topbar-dropdown">
                         <a class="nav-link dropdown-toggle arrow-none waves-effect waves-light"
                             data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false"
                             aria-expanded="false">
-                            <img src="{{ asset('dashboard') }}/images/flags/us.jpg" alt="user-image" height="16">
+                            <img src="{{ asset('public/dashboard') }}/images/flags/us.jpg" alt="user-image" height="16">
                         </a>
                         <div class="dropdown-menu dropdown-menu-end">
 
                             <!-- item-->
                             <a href="javascript:void(0);" class="dropdown-item">
-                                <img src="{{ asset('dashboard') }}/images/flags/germany.jpg" alt="user-image" class="me-1" height="12">
+                                <img src="{{ asset('public/dashboard') }}/images/flags/germany.jpg" alt="user-image" class="me-1" height="12">
                                 <span class="align-middle">German</span>
                             </a>
 
                             <!-- item-->
                             <a href="javascript:void(0);" class="dropdown-item">
-                                <img src="{{ asset('dashboard') }}/images/flags/italy.jpg" alt="user-image" class="me-1" height="12">
+                                <img src="{{ asset('public/dashboard') }}/images/flags/italy.jpg" alt="user-image" class="me-1" height="12">
                                 <span class="align-middle">Italian</span>
                             </a>
 
                             <!-- item-->
                             <a href="javascript:void(0);" class="dropdown-item">
-                                <img src="{{ asset('dashboard') }}/images/flags/spain.jpg" alt="user-image" class="me-1" height="12">
+                                <img src="{{ asset('public/dashboard') }}/images/flags/spain.jpg" alt="user-image" class="me-1" height="12">
                                 <span class="align-middle">Spanish</span>
                             </a>
 
                             <!-- item-->
                             <a href="javascript:void(0);" class="dropdown-item">
-                                <img src="{{ asset('dashboard') }}/images/flags/russia.jpg" alt="user-image" class="me-1" height="12">
+                                <img src="{{ asset('public/dashboard') }}/images/flags/russia.jpg" alt="user-image" class="me-1" height="12">
                                 <span class="align-middle">Russian</span>
                             </a>
-
                         </div>
                     </li>
-
                     <li class="dropdown notification-list topbar-dropdown">
-                        <a class="nav-link dropdown-toggle waves-effect waves-light" data-bs-toggle="dropdown" href="#"
-                            role="button" aria-haspopup="false" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle waves-effect waves-light" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                             <i class="fe-bell noti-icon"></i>
                             <span class="badge bg-danger rounded-circle noti-icon-badge">5</span>
                         </a>
@@ -152,21 +139,17 @@
                                     </span>Notification
                                 </h5>
                             </div>
-
                             <div class="noti-scroll" data-simplebar>
-
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item active">
                                     <div class="notify-icon">
-                                        <img src="{{ asset('dashboard') }}/images/users/user-1.jpg" class="img-fluid rounded-circle"
-                                            alt="" />
+                                        <img src="{{ asset('public/dashboard') }}/images/users/user-1.jpg" class="img-fluid rounded-circle" />
                                     </div>
                                     <p class="notify-details">Cristina Pride</p>
                                     <p class="text-muted mb-0 user-msg">
                                         <small>Hi, How are you? What about our next meeting</small>
                                     </p>
                                 </a>
-
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
                                     <div class="notify-icon bg-primary">
@@ -176,11 +159,10 @@
                                         <small class="text-muted">1 min ago</small>
                                     </p>
                                 </a>
-
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
                                     <div class="notify-icon">
-                                        <img src="{{ asset('dashboard') }}/images/users/user-4.jpg" class="img-fluid rounded-circle"
+                                        <img src="{{ asset('public/dashboard') }}/images/users/user-4.jpg" class="img-fluid rounded-circle"
                                             alt="" />
                                     </div>
                                     <p class="notify-details">Karen Robinson</p>
@@ -188,7 +170,6 @@
                                         <small>Wow ! this admin looks good and awesome design</small>
                                     </p>
                                 </a>
-
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
                                     <div class="notify-icon bg-warning">
@@ -198,7 +179,6 @@
                                         <small class="text-muted">5 hours ago</small>
                                     </p>
                                 </a>
-
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
                                     <div class="notify-icon bg-info">
@@ -208,7 +188,6 @@
                                         <small class="text-muted">4 days ago</small>
                                     </p>
                                 </a>
-
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
                                     <div class="notify-icon bg-secondary">
@@ -220,22 +199,18 @@
                                     </p>
                                 </a>
                             </div>
-
                             <!-- All-->
-                            <a href="javascript:void(0);"
-                                class="dropdown-item text-center text-primary notify-item notify-all">
-                                View all
+                            <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all"> View all
                                 <i class="fe-arrow-right"></i>
                             </a>
 
                         </div>
                     </li>
-
                     <li class="dropdown notification-list topbar-dropdown">
                         <a class="nav-link dropdown-toggle nav-user me-0 waves-effect waves-light"
                             data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false"
                             aria-expanded="false">
-                            <img src="{{ asset('dashboard') }}/images/users/user-1.jpg" alt="user-image" class="rounded-circle">
+                            <img src="{{ asset('public/dashboard') }}/images/users/user-1.jpg" alt="user-image" class="rounded-circle">
                             <span class="pro-user-name ms-1">
                                 Richard <i class="mdi mdi-chevron-down"></i>
                             </span>
@@ -263,49 +238,42 @@
                                 <i class="fe-lock"></i>
                                 <span>Lock Screen</span>
                             </a>
-
                             <div class="dropdown-divider"></div>
-
                             <!-- item-->
                             <a href="{{ route('logout') }}" class="dropdown-item notify-item">
                                 <i class="fe-log-out"></i>
                                 <span>Logout</span>
                             </a>
-
                         </div>
                     </li>
-
                     <li class="dropdown notification-list">
                         <a href="javascript:void(0);" class="nav-link right-bar-toggle waves-effect waves-light">
                             <i class="fe-settings noti-icon"></i>
                         </a>
                     </li>
-
                 </ul>
-
                 <!-- LOGO -->
                 <div class="logo-box">
                     <a href="index.html" class="logo logo-dark text-center">
                         <span class="logo-sm">
-                            <img src="{{ asset('dashboard') }}/images/logo-sm.png" alt="" height="44">
+                            <img src="{{ asset('public/dashboard') }}/images/logo-sm.png" alt="" height="44">
                             <!-- <span class="logo-lg-text-light">Codefox</span> -->
                         </span>
                         <span class="logo-lg">
-                            <img src="{{ asset('dashboard') }}/images/logo-dark.png" alt="" height="44">
+                            <img src="{{ asset('public/dashboard') }}/images/logo-dark.png" alt="" height="44">
                             <!-- <span class="logo-lg-text-light">U</span> -->
                         </span>
                     </a>
 
                     <a href="index.html" class="logo logo-light text-center">
                         <span class="logo-sm">
-                            <img src="{{ asset('dashboard') }}/images/logo-sm.png" alt="" height="44">
+                            <img src="{{ asset('public/dashboard') }}/images/logo-sm.png" alt="" height="44">
                         </span>
                         <span class="logo-lg">
-                            <img src="{{ asset('dashboard') }}/images/logo-light.png" alt="" height="44">
+                            <img src="{{ asset('public/dashboard') }}/images/logo-light.png" alt="" height="44">
                         </span>
                     </a>
                 </div>
-
                 <ul class="list-unstyled topnav-menu topnav-menu-left m-0">
                     <li>
                         <button class="button-menu-mobile waves-effect waves-light">
@@ -330,18 +298,13 @@
             </div>
         </div>
         <!-- end Topbar -->
-
         <!-- ========== Left Sidebar Start ========== -->
         <div class="left-side-menu">
-
             <div class="h-100" data-simplebar>
                 <!--- Sidemenu -->
                 <div id="sidebar-menu">
-
                     <ul id="side-menu">
-
                         <li class="menu-title">Navigation</li>
-
                         <li>
                             <a href="index.html">
                                 <i class="fe-airplay"></i>
@@ -549,49 +512,38 @@
             <!-- Sidebar -left -->
         </div>
         <!-- Left Sidebar End -->
-
         <!-- ============================================================== -->
         <!-- Start Page Content here -->
         <!-- ============================================================== -->
-
         <div class="content-page">
-
             @yield('content')
-
-
-      <!-- Footer Start -->
-      <footer class="footer">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-6">
-                    <script>document.write(new Date().getFullYear())</script> &copy; Codefox theme by <a
-                        href="#">Coderthemes</a>
-                </div>
-                <div class="col-md-6">
-                    <div class="text-md-end footer-links d-none d-sm-block">
-                        <a href="javascript:void(0);">About Us</a>
-                        <a href="javascript:void(0);">Help</a>
-                        <a href="javascript:void(0);">Contact Us</a>
+        <!-- Footer Start -->
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <script>document.write(new Date().getFullYear())</script> &copy; Developed by <a  href="#">HANSOL Technologies</a>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-md-end footer-links d-none d-sm-block">
+                            <a href="javascript:void(0);">About Us</a>
+                            <a href="javascript:void(0);">Help</a>
+                            <a href="javascript:void(0);">Contact Us</a>
+                        </div>
                     </div>
                 </div>
             </div>
+        </footer>
+        <!-- end Footer -->
         </div>
-    </footer>
-    <!-- end Footer -->
-
-</div>
-
-<!-- ============================================================== -->
-<!-- End Page content -->
-<!-- ============================================================== -->
-
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
 </div>
 <!-- END wrapper -->
-
 <!-- Right Sidebar -->
 <div class="right-bar">
 <div data-simplebar class="h-100">
-
     <h6 class="fw-semibold px-3 m-0 py-2 font-16 bg-light">
         <span class="d-block py-2">Theme Settings</span>
     </h6>
@@ -600,14 +552,12 @@
         <div class="alert alert-warning" role="alert">
             <strong>Customize </strong> the overall color scheme, sidebar menu, etc.
         </div>
-
         <h6 class="fw-medium font-14 mt-4 mb-2 pb-1">Color Scheme</h6>
         <div class="form-check form-switch mb-1">
             <input type="checkbox" class="form-check-input" name="color-scheme-mode" value="light"
                 id="light-mode-check" checked />
             <label class="form-check-label" for="light-mode-check">Light Mode</label>
         </div>
-
         <div class="form-check form-switch mb-1">
             <input type="checkbox" class="form-check-input" name="color-scheme-mode" value="dark"
                 id="dark-mode-check" />
@@ -617,8 +567,7 @@
         <!-- Width -->
         <h6 class="fw-medium font-14 mt-4 mb-2 pb-1">Width</h6>
         <div class="form-check form-switch mb-1">
-            <input type="checkbox" class="form-check-input" name="width" value="fluid" id="fluid-check"
-                checked />
+            <input type="checkbox" class="form-check-input" name="width" value="fluid" id="fluid-check" checked />
             <label class="form-check-label" for="fluid-check">Fluid</label>
         </div>
         <div class="form-check form-switch mb-1">
@@ -628,28 +577,23 @@
 
         <!-- Menu positions -->
         <h6 class="fw-medium font-14 mt-4 mb-2 pb-1">Menus (Leftsidebar and Topbar) Positon</h6>
-
         <div class="form-check form-switch mb-1">
             <input type="checkbox" class="form-check-input" name="menus-position" value="fixed" id="fixed-check"
                 checked />
             <label class="form-check-label" for="fixed-check">Fixed</label>
         </div>
-
         <div class="form-check form-switch mb-1">
             <input type="checkbox" class="form-check-input" name="menus-position" value="scrollable"
                 id="scrollable-check" />
             <label class="form-check-label" for="scrollable-check">Scrollable</label>
         </div>
-
         <!-- Left Sidebar-->
         <h6 class="fw-medium font-14 mt-4 mb-2 pb-1">Left Sidebar Color</h6>
-
         <div class="form-check form-switch mb-1">
             <input type="checkbox" class="form-check-input" name="leftsidebar-color" value="light"
                 id="light-check" />
             <label class="form-check-label" for="light-check">Light</label>
         </div>
-
         <div class="form-check form-switch mb-1">
             <input type="checkbox" class="form-check-input" name="leftsidebar-color" value="dark"
                 id="dark-check" checked />
@@ -691,28 +635,22 @@
 
         <!-- Topbar -->
         <h6 class="fw-medium font-14 mt-4 mb-2 pb-1">Topbar</h6>
-
         <div class="form-check form-switch mb-1">
             <input type="checkbox" class="form-check-input" name="topbar-color" value="dark"
                 id="darktopbar-check" checked />
             <label class="form-check-label" for="darktopbar-check">Dark</label>
         </div>
-
         <div class="form-check form-switch mb-1">
             <input type="checkbox" class="form-check-input" name="topbar-color" value="light"
                 id="lighttopbar-check" />
             <label class="form-check-label" for="lighttopbar-check">Light</label>
         </div>
-
-
         <div class="d-grid mt-4">
             <button class="btn btn-primary" id="resetBtn">Reset to Default</button>
-            <a href="https://wrapbootstrap.com/theme/codefox-admin-dashboard-template-WB0X27670?ref=coderthemes"
+            <a href="javascript:void(0)"
                 class="btn btn-danger mt-2" target="_blank"><i class="mdi mdi-basket me-1"></i> Purchase Now</a>
         </div>
-
     </div>
-
 </div> <!-- end simplebar-menu-->
 </div>
 <!-- /Right-bar -->
@@ -720,43 +658,39 @@
 <!-- Right bar overlay-->
 <div class="rightbar-overlay"></div>
 <!-- Vendor js -->
-<script src="{{ asset('dashboard') }}/js/vendor.min.js"></script>
+<script src="{{ asset('public/dashboard') }}/js/vendor.min.js"></script>
 <!-- Plugins js-->
-<script src="{{ asset('dashboard') }}/libs/apexcharts/apexcharts.min.js"></script>
+<script src="{{ asset('public/dashboard') }}/libs/apexcharts/apexcharts.min.js"></script>
 <!-- Dashboar 1 init js-->
-<script src="{{ asset('dashboard') }}/js/pages/dashboard-1.init.js"></script>
+<script src="{{ asset('public/dashboard') }}/js/pages/dashboard-1.init.js"></script>
 <!-- Plugins js-->
-<script src="{{ asset('dashboard') }}/libs/flatpickr/flatpickr.min.js"></script>
-<script src="{{ asset('dashboard') }}/libs/spectrum-colorpicker2/spectrum.min.js"></script>
-<script src="{{ asset('dashboard') }}/libs/clockpicker/bootstrap-clockpicker.min.js"></script>
-<script src="{{ asset('dashboard') }}/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+<script src="{{ asset('public/dashboard') }}/libs/flatpickr/flatpickr.min.js"></script>
+<script src="{{ asset('public/dashboard') }}/libs/spectrum-colorpicker2/spectrum.min.js"></script>
+<script src="{{ asset('public/dashboard') }}/libs/clockpicker/bootstrap-clockpicker.min.js"></script>
+<script src="{{ asset('public/dashboard') }}/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
 <!-- Init js-->
-<script src="{{ asset('dashboard') }}/js/pages/form-advanced.init.js"></script>
-<script src="{{ asset('dashboard') }}/js/pages/form-pickers.init.js"></script>
-
-
+<script src="{{ asset('public/dashboard') }}/js/pages/form-advanced.init.js"></script>
+<script src="{{ asset('public/dashboard') }}/js/pages/form-pickers.init.js"></script>
  <!-- third party js -->
- <script src="{{ asset('dashboard') }}/libs/datatables.net/js/jquery.dataTables.min.js"></script>
- <script src="{{ asset('dashboard') }}/libs/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
- <script src="{{ asset('dashboard') }}/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
- <script src="{{ asset('dashboard') }}/libs/datatables.net-responsive-bs5/js/responsive.bootstrap5.min.js"></script>
- <script src="{{ asset('dashboard') }}/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
- <script src="{{ asset('dashboard') }}/libs/datatables.net-buttons-bs5/js/buttons.bootstrap5.min.js"></script>
- <script src="{{ asset('dashboard') }}/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
- <script src="{{ asset('dashboard') }}/libs/datatables.net-buttons/js/buttons.flash.min.js"></script>
- <script src="{{ asset('dashboard') }}/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
- <script src="{{ asset('dashboard') }}/libs/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
- <script src="{{ asset('dashboard') }}/libs/datatables.net-select/js/dataTables.select.min.js"></script>
- <script src="{{ asset('dashboard') }}/libs/pdfmake/build/pdfmake.min.js"></script>
- <script src="{{ asset('dashboard') }}/libs/pdfmake/build/vfs_fonts.js"></script>
+ <script src="{{ asset('public/dashboard') }}/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+ <script src="{{ asset('public/dashboard') }}/libs/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
+ <script src="{{ asset('public/dashboard') }}/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+ <script src="{{ asset('public/dashboard') }}/libs/datatables.net-responsive-bs5/js/responsive.bootstrap5.min.js"></script>
+ <script src="{{ asset('public/dashboard') }}/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+ <script src="{{ asset('public/dashboard') }}/libs/datatables.net-buttons-bs5/js/buttons.bootstrap5.min.js"></script>
+ <script src="{{ asset('public/dashboard') }}/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+ <script src="{{ asset('public/dashboard') }}/libs/datatables.net-buttons/js/buttons.flash.min.js"></script>
+ <script src="{{ asset('public/dashboard') }}/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
+ <script src="{{ asset('public/dashboard') }}/libs/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+ <script src="{{ asset('public/dashboard') }}/libs/datatables.net-select/js/dataTables.select.min.js"></script>
+ <script src="{{ asset('public/dashboard') }}/libs/pdfmake/build/pdfmake.min.js"></script>
+ <script src="{{ asset('public/dashboard') }}/libs/pdfmake/build/vfs_fonts.js"></script>
  <!-- third party js ends -->
-
  <!-- Datatables init -->
- <script src="{{ asset('dashboard') }}/js/pages/datatables.init.js"></script>
+ <script src="{{ asset('public/dashboard') }}/js/pages/datatables.init.js"></script>
 <!-- App js-->
-<script src="{{ asset('dashboard') }}/js/app.min.js"></script>
+<script src="{{ asset('public/dashboard') }}/js/app.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
 @if (Session::has('message'))
     <script>
         Swal.fire({
