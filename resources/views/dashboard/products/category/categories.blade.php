@@ -40,6 +40,7 @@
                                 <tr>
                                     <th>File</th>
                                     <th>Name</th>
+                                    <th>Status</th>
                                     <th>Created At</th>
                                     <th>Actions</th>
                                 </tr>
@@ -48,8 +49,9 @@
                                 @if(isset($categories) && $categories->count() > 0)
                                 @foreach ($categories as $category)
                                 <tr>
-                                    <td><img src="{{ asset('public/dashboard') }}/{{ $category->image }}" style="width:80px;"></td>
+                                    <td><img src="{{ asset('public/dashboard') }}/{{ $category->image }}" style="width:50px; border-radius:30%;"></td>
                                     <td>{{ $category->name ?? '' }}</td>
+                                    <td>{{ $category->is_active ?? '' }}</td>
                                     <td>{{ $category->created_at ?? '' }}</td>
                                     <td>
                                         <a><i class="far fa-eye text-success font-size-16"></i></a> |
@@ -97,7 +99,7 @@
                             <div class="col-md-12">
                                 <div class="mb-3">
                                     <label for="field-3" class="form-label">Status</label>
-                                    <select class="selectize-select">
+                                    <select class="selectize-select" name="is_active">
                                         <option value="1">Active</option>
                                         <option value="0">In Active</option>
                                     </select>  

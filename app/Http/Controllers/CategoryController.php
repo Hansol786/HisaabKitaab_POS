@@ -18,7 +18,7 @@ class CategoryController extends Controller
         }
         Category::create([
             'name' => $request->name,
-            'is_active' => $request->name,
+            'is_active' => $request->is_active,
             'image' => $image
         ]);
         return redirect()->back()->with(['title'=>'Done','message'=>'Category added succssfully','type'=>'success']);
