@@ -29,13 +29,13 @@
 
                             <div class="text-center w-75 m-auto">
                                 <div class="auth-logo">
-                                    <a href="index.html" class="logo logo-dark text-center">
+                                    <a href="{{ url('/') }}" class="logo logo-dark text-center">
                                         <span class="logo-lg">
-                                            <img src="{{ asset('public/dashboard') }}/images/logo-light.png" alt="" height="22">
+                                            <img src="{{ asset('public/dashboard') }}/images/logo-light.png" alt="" height="40">
                                         </span>
                                     </a>
 
-                                    <a href="index.html" class="logo logo-light text-center">
+                                    <a href="{{ url('/') }}" class="logo logo-light text-center">
                                         <span class="logo-lg">
                                             <img src="{{ asset('public/dashboard') }}/images/logo-light.png" alt="" height="22">
                                         </span>
@@ -91,44 +91,22 @@
                                 <div class="text-center d-grid">
                                     <button class="btn btn-primary" type="submit"> {{ __('Login') }}</button>
                                 </div>
-
                             </form>
-
-                            <div class="text-center">
-                                <h5 class="mt-3 text-muted">Sign in with</h5>
-                                <ul class="social-list list-inline mt-3 mb-0">
-                                    <li class="list-inline-item">
-                                        <a href="javascript: void(0);" class="social-list-item border-primary text-primary"><i class="mdi mdi-facebook"></i></a>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <a href="javascript: void(0);" class="social-list-item border-danger text-danger"><i class="mdi mdi-google"></i></a>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <a href="javascript: void(0);" class="social-list-item border-info text-info"><i class="mdi mdi-twitter"></i></a>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <a href="javascript: void(0);" class="social-list-item border-secondary text-secondary"><i class="mdi mdi-github"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-
                         </div> <!-- end card-body -->
                     </div>
                     <!-- end card -->
 
-                    <div class="row mt-3">
+                    <div class="row">
                         <div class="col-12 text-center">
                             @if (Route::has('password.request'))
-                                <p> <a href="{{ route('password.request') }}"
-                                        class="text-muted ms-1">{{ __('Forgot Your Password?') }}</a></p>
+                                <p> <a href="{{ route('password.request') }}" class="text-muted ms-1">{{ __('Forgot Your Password?') }}</a></p>
                             @endif
-
-                            <p class="text-muted">Don't have an account? <a href="{{ route('register') }}"
-                                    class="text-dark text-decoration-underline ms-1"><b>Sign Up</b></a></p>
+                            <p class="text-muted">Don't have an account? 
+                                <a href="{{ route('register') }}" class="text-dark text-decoration-underline ms-1"><b>Sign Up</b></a>
+                            </p>
                         </div> <!-- end col -->
                     </div>
                     <!-- end row -->
-
                 </div> <!-- end col -->
             </div>
             <!-- end row -->
@@ -139,8 +117,7 @@
     <footer class="footer footer-alt">
         <script>
             document.write(new Date().getFullYear())
-        </script> &copy; Codefox theme by <a href="#!"
-            class="link-dark text-decoration-underline">Coderthemes</a>
+        </script> &copy; Developed by <a href="https://hansoltechnologies.com/" class="link-dark text-decoration-underline">HANSOL Technologies</a>
     </footer>
 
     <!-- Vendor js -->
