@@ -1,0 +1,11 @@
+.switchery-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Adjust the space between each switch item */
+}
+
+.switchery-item {
+    align-items: center;
+    gap: 5px; /* Adjust the space between label and checkbox */
+    text-align: center;
+}
