@@ -169,9 +169,7 @@
 
     <!-- Vendor js -->
     <script src="{{ asset('dashboard') }}/js/vendor.min.js"></script>
-
     <!-- App js -->
     <script src="{{ asset('dashboard') }}/js/app.min.js"></script>
-
 </body>
 </html>
