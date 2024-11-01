@@ -10,12 +10,6 @@ class DashboardController extends Controller
     {
         $this->middleware('auth');
     }
-
-    public function categories()
-    {
-        return view('dashboard.products.category.categories');
-    }
-
     public function products()
     {
        return view('dashboard.products.product.products');
@@ -25,7 +19,6 @@ class DashboardController extends Controller
     {
        return view('dashboard.products.product.product_create');
     }
-
 
     public function variations()
     {
@@ -61,6 +54,4 @@ class DashboardController extends Controller
     {
         return view('dashboard.adjustment.adjustment_create');
     }
-
-
 }

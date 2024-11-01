@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RolePermissionController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,7 +27,10 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/logout', [App\Http\Controllers\HomeController::class, 'logout'])->name('logout');
 
-Route::get('/categories', [DashboardController::class, 'categories'])->name('categories');
+// Category
+Route::post('/submit_category', [CategoryController::class, 'submitCategory'])->name('submit_category');
+Route::get('/categories', [CategoryController::class, 'categories'])->name('categories');
+
 // products Routes
 Route::get('/products', [DashboardController::class, 'products'])->name('products');
 Route::get('/product_create', [DashboardController::class, 'productCreate'])->name('product_create');

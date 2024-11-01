@@ -56,6 +56,15 @@ return [
             'throw' => false,
         ],
 
+        'website' => [
+            'driver' => 'local',
+            'root' => public_path() . '/website',
+        ],
+        'dashboard' => [
+            'driver' => 'local',
+            'root' => public_path() . '/dashboard',
+        ],
+
     ],
 
     /*
