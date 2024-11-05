@@ -25,11 +25,6 @@ class DashboardController extends Controller
         return view('dashboard.products.variations.variations');
     }
 
-    public function brands()
-    {
-        return view('dashboard.products.brand.brands');
-    }
-
     public function units()
     {
         return view('dashboard.products.units.units');

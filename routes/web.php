@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BrandController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RolePermissionController;
 use Illuminate\Support\Facades\Auth;
@@ -40,7 +41,16 @@ Route::get('/products', [DashboardController::class, 'products'])->name('product
 Route::get('/product_create', [DashboardController::class, 'productCreate'])->name('product_create');
 
 Route::get('/variations', [DashboardController::class, 'variations'])->name('variations');
-Route::get('/brands', [DashboardController::class, 'brands'])->name('brands');
+
+// Brand Routes
+Route::get('/brands', [BrandController::class, 'brands'])->name('brands');
+Route::post('/submit_brand', [BrandController::class, 'submitBrand'])->name('submit_brand');
+Route::get('/get_brand/{id}', [BrandController::class, 'show'])->name('get_brand/{id}');
+Route::post('/update_brand', [BrandController::class, 'updateBrand'])->name('update_brand');
+Route::get('/delete_brand/{id}', [BrandController::class, 'deleteBrand'])->name('delete_brand/{id}');
+
+
+
 Route::get('/units', [DashboardController::class, 'units'])->name('units');
 Route::get('/base_units', [DashboardController::class, 'baseUnits'])->name('base_units');
 Route::get('/print_parcode', [DashboardController::class, 'printBarcode'])->name('print_parcode');

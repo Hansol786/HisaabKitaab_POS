@@ -88,8 +88,7 @@
                                     <div class="col-md-12">
                                         <div class="mb-3">
                                             <label for="field-1" class="form-label">Name</label>
-                                            <input type="text" class="form-control" id="field-1" name="name"
-                                                placeholder="Enter Category">
+                                            <input type="text" class="form-control" id="field-1" name="name" placeholder="Enter Category">
                                         </div>
                                     </div>
                                 </div>
