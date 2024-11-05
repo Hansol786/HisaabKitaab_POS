@@ -190,7 +190,7 @@
             $(document).on('click', '.edit-category', function() {
                 var categoryId = $(this).data('id');
                 $.ajax({
-                    url: '/HisaabKitaab_POS/get_category/' + categoryId, // Ensure this URL matches your defined route
+                    url: '{{ url("get_category") }}/' + categoryId, // Ensure this URL matches your defined route
                     method: 'GET',
                     success: function(response) {
                         $('#edit-category-id').val(response.id);

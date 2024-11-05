@@ -117,7 +117,7 @@
                             <div class="modal-footer">
                                 <button type="button"
                                     class="btn btn-secondary waves-effect"data-bs-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-info waves-effect waves-light">Add Category</button>
+                                <button type="submit" class="btn btn-info waves-effect waves-light">Add Brand</button>
                             </div>
                         </form>
                     </div>
@@ -191,7 +191,7 @@
             $(document).on('click', '.edit-brand', function() {
                 var brandId = $(this).data('id');
                 $.ajax({
-                    url: '/HisaabKitaab_POS/get_brand/' + brandId,
+                    url: '{{ url("get_brand") }}/' + brandId,
                     method: 'GET',
                     success: function(response) {
                         $('#edit-brand-id').val(response.id);
