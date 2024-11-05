@@ -60,7 +60,7 @@
                                                     <button class="btn btn-danger btn-sm">In Active</button>
                                                 @endif
                                             </td>
-                                            <td>{{ $brand->created_at ?? '' }}</td>
+                                            <td>{{ $brand->created_at ? $brand->created_at->format('Y-m-d') : '' }}</td>
                                             <td>
                                                 <a href="javascript:void(0)" class="edit-brand" data-id="{{ $brand->id }}">
                                                     <i class="far fa-edit text-primary font-size-16"></i>

@@ -60,7 +60,7 @@
                                                         <button class="btn btn-danger btn-sm">In Active</button>
                                                     @endif
                                                 </td>
-                                                <td>{{ $category->created_at ?? '' }}</td>
+                                                <td>{{ $category->created_at ? $category->created_at->format('Y-m-d') : '' }}</td>
                                                 <td>
                                                     <a href="javascript:void(0)" class="edit-category" data-id="{{ $category->id }}">
                                                         <i class="far fa-edit text-primary font-size-16"></i>
