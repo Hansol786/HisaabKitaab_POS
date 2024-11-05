@@ -73,17 +73,14 @@ class CategoryController extends Controller
     // Delete Category from database
     public function deleteCategory($id)
     {
-        // Find the category by ID
         $category = Category::findOrFail($id);
-        // Get the image path to delete it from storage
-        $imagePath = $category->image;
-        // Delete the category record
-        $category->delete();
-        // Check if the image exists and delete it from storage
-        if ($imagePath) {
-            Storage::disk('dashboard')->delete($imagePath);
+        if($category){
+            $oldImage = $category->image;
+            if($oldImage){
+                Storage::disk('dashboard')->delete($oldImage);
+            }
+            $category->delete();
         }
-        // Redirect back with a success message
-        return redirect()->back()->with(['title' => 'Deleted', 'message' => 'Category deleted successfully!', 'type' => 'success']);
+        return redirect('categories')->with(['title' => 'Done','type' => 'success','message' => 'Category deleted successfully!']);
     }
 }

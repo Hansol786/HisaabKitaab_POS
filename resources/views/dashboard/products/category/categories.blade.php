@@ -59,7 +59,7 @@
                                                     <a href="javascript:void(0)" class="edit-category" data-id="{{ $category->id }}">
                                                         <i class="far fa-edit text-primary font-size-16"></i>
                                                     </a>
-                                                    <a href="javascript:void(0)" class="delete-category" data-id="{{ $category->id }}">
+                                                    <a href="{{ url('delete_category') }}/{{ $category->id }}" id="delete">
                                                         <i class="fas fa-trash-alt text-danger font-size-16"></i>
                                                     </a>
                                                 </td>
@@ -207,24 +207,26 @@
                 });
             });
             // Delete category funcationality
-            $(document).on('click', '.delete-category', function() {
-                var categoryId = $(this).data('id');
-                if (confirm('Are you sure you want to delete this category?')) {
-                    $.ajax({
-                        url: '/HisaabKitaab_POS/delete_category/' + categoryId,
-                        type: 'GET',
-                        success: function(response) {
-                            // Handle success (e.g., refresh the page or remove the row)
-                            location.reload(); // Reload the page to see changes
-                        },
-                        error: function(xhr) {
-                            // Handle error
-                            alert('Something went wrong, please try again.');
-                        }
-                    });
-                }
-            });
-        })
+           $(document).on('click', '#delete', function(event) {
+                event.preventDefault();
+                var deleteUrl = $(this).attr('href');
+                // Show a confirmation dialog
+                Swal.fire({
+                    title: "Are you sure?",
+                    text: "You won't be able to revert this!",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#3085d6",
+                    cancelButtonColor: "#d33",
+                    confirmButtonText: "Yes, delete it!"
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        // Navigate to the delete URL
+                        window.location.href = deleteUrl;
+                    }
+                });
+            })
+        }); // document ready end here
 
     </script>
 @endpush
