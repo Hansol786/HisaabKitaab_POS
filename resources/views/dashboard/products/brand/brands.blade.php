@@ -53,7 +53,13 @@
                                                 <img src="{{ asset('public/dashboard') }}/{{ $brand->image }}" style="width:50px; border-radius:30%;">
                                             </td>
                                             <th>{{ $brand->name ?? '' }}</th>
-                                            <td>{{ $brand->status ?? '' }}</td>
+                                            <td>
+                                                @if($brand->status == "1")
+                                                    <button class="btn btn-success btn-sm">Active</button>
+                                                @else
+                                                    <button class="btn btn-danger btn-sm">In Active</button>
+                                                @endif
+                                            </td>
                                             <td>{{ $brand->created_at ?? '' }}</td>
                                             <td>
                                                 <a href="javascript:void(0)" class="edit-brand" data-id="{{ $brand->id }}">

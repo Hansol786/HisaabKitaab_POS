@@ -53,7 +53,13 @@
                                                     <img src="{{ asset('public/dashboard') }}/{{ $category->image }}" style="width:50px; border-radius:30%;">
                                                 </td>
                                                 <td>{{ $category->name ?? '' }}</td>
-                                                <td>{{ $category->is_active ?? '' }}</td>
+                                                <td>
+                                                    @if($category->is_active == "1")
+                                                    <button class="btn btn-success btn-sm">Active</button>
+                                                    @else
+                                                        <button class="btn btn-danger btn-sm">In Active</button>
+                                                    @endif
+                                                </td>
                                                 <td>{{ $category->created_at ?? '' }}</td>
                                                 <td>
                                                     <a href="javascript:void(0)" class="edit-category" data-id="{{ $category->id }}">
