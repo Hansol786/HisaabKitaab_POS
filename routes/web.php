@@ -27,9 +27,13 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/logout', [App\Http\Controllers\HomeController::class, 'logout'])->name('logout');
 
-// Category
+// Category Routes
 Route::post('/submit_category', [CategoryController::class, 'submitCategory'])->name('submit_category');
 Route::get('/categories', [CategoryController::class, 'categories'])->name('categories');
+Route::get('/get_category/{id}', [CategoryController::class, 'show'])->name('get_category/{id}');
+Route::post('/update_category', [CategoryController::class, 'updateCategory'])->name('update_category');
+Route::get('/delete_category/{id}', [CategoryController::class, 'deleteCategory'])->name('delete_category/{id}');
+
 
 // products Routes
 Route::get('/products', [DashboardController::class, 'products'])->name('products');
